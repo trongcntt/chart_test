@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<body>
+<div id="myChart" style="width:100%; width:80rem; height:40rem; ">
+  <div id="myChart1" style="width:100%; width:80rem; height:40rem; ">
+</div>
+
+<script>
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+  ['Contry', 'Mhl'],
+  ['trong',20],
+  ['long',20],
+  ['huong',20],
+  ['quan',20],
+  ['hanh',20]
+]);
+
+var options = {
+  title:'chắc là được'
+};
+
+var chart = new google.visualization.PieChart(document.getElementById('myChart'));
+var chart1 = new google.visualization.PieChart(document.getElementById('myChart1'));
+  chart.draw(data, options);
+  chart1.draw(data,options);
+}
+</script>
+
+</body>
+</html>
